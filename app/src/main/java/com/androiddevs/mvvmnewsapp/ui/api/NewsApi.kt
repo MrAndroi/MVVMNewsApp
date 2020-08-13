@@ -6,7 +6,7 @@ import retrofit2.http.Query
 import com.androiddevs.mvvmnewsapp.ui.models.NewsResponse
 
 val BASE_URL = "https://newsapi.org"
-val API_KEY="3ed0d3a9b0ee4539a957b23a12e61abe"
+val API_KEY="YOUR_API_KEY"
 
 interface NewsApi {
 
