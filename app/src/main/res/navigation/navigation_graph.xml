@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    tools:ignore="UnusedNavigation"
+    app:startDestination="@id/breakingFragment">
+
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.androiddevs.mvvmnewsapp.ui.fragments.ArticleFragment"
+        tools:layout="@layout/fragment_article"
+        android:label="ArticleFragment" >
+        <argument
+            android:name="article"
+            app:argType="com.androiddevs.mvvmnewsapp.ui.models.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/breakingFragment"
+        android:name="com.androiddevs.mvvmnewsapp.ui.fragments.BreakingFragment"
+        tools:layout="@layout/fragment_breaking_news"
+        android:label="BreakingFragment" >
+        <action
+            android:id="@+id/action_breakingFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/savedNewsFragment"
+        android:name="com.androiddevs.mvvmnewsapp.ui.fragments.SavedNewsFragment"
+        tools:layout="@layout/fragment_saved_news"
+        android:label="SavedNewsFragment" >
+        <action
+            android:id="@+id/action_savedNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/searchNewsFragment"
+        android:name="com.androiddevs.mvvmnewsapp.ui.fragments.SearchNewsFragment"
+        tools:layout="@layout/fragment_search_news"
+        android:label="SearchNewsFragment" >
+        <action
+            android:id="@+id/action_searchNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+</navigation>
